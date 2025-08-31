@@ -1,0 +1,13 @@
+spring:
+  application.name: gateway-jtc-logistic
+server:
+  port: 8181
+
+  cloud:
+    gateway:
+      routes:
+        - id: Logistic-Commodity
+          url: http://loalhost:9000
+          predicates:
+            - Path=/logistic/commodity/**
+
